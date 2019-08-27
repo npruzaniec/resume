@@ -1,0 +1,124 @@
+!!! 5
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+
+
+
+
+
+%html.no-js
+  <!--<![endif]-->
+
+  %head
+    %meta{ charset: "utf-8"}
+    %meta{ charset: "X-UA-Compatible", content: "IE=edge,chrome=1" }
+    %title
+    %meta{ name: "description", content: "" }
+    %meta{ name: "viewport", content: "width=device-width" }
+    %link{ href: "https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap", rel: "stylesheet"}
+
+    / Place favicon.ico and apple-touch-icon.png in the root directory
+
+    %link{ rel: "stylesheet", href: "sass/styles.css" }
+
+
+
+
+  %body
+    %section#header
+      .header-wrap.flex
+        .header-section.me
+          .name
+            %h1 Nathan Pruzaniec
+          .link
+            %h2
+              %a{:href => 'https://www.linkedin.com/in/npruzaniec'} linkedin.com/in/npruzaniec
+        .header-section.about.text-center
+          .interests
+            %h3 Technologist • Developer • Data Nerd • Endlessly Curious
+          .location
+            %h2 Redding, CA
+        .header-section.contact.text-right
+          .email
+            %h2
+              %a{:href => 'mailto:nathan@pru.design'} nathan@pru.design
+          .phone
+            %h2
+              %a{:href => 'tel:501.472.1274'} 501.472.1274
+              /- jobs[0].shuffle.each_with_index do |book, index|
+              /%h1= jobs[0].title
+    %section#about
+      %h1 About
+      %a.button{ :href => 'mailto:nathan@pru.design' } Contact Me
+      .about-copy
+        %p I love understanding, disecting, refining, improving, and bringing effieciency to systems. The more data the better, the bigger the problem, the more fun. I love building teams, and understanding everything. I love understanding, disecting, refining, improving, and bringing effieciency to systems. The more data the better, the bigger the problem, the more fun. I love building teams, and understanding everything. I love understanding, disecting, refining, improving, and bringing effieciency to systems. The more data the better, the bigger the problem, the more fun. I love building teams, and understanding everything.
+    %section#work
+      %h1 Work
+      .job.active
+        .job-wrap
+          .main
+            %h2.job-title Technology Director
+            %h3.job-company Bethel Media Group
+            %h3.job-dates 2016 - Present
+          .pts
+            %ul
+              %li Leading a dev team consisting of product manger, UI/UX designer, business analyst, and 8 remote and local developers.
+              %li Leading research and implementation of technology solutions...
+      .job
+        .job-wrap
+          .main
+            %h2.job-title Lead Developer
+            %h3.job-company Silverlake Design Studio
+            %h3.job-dates 2016 - 2017
+          .pts
+            %ul
+              %li Leading a dev team consisting of product manger, UI/UX designer, business analyst, and 8 remote and local developers.
+              %li Leading research and implementation of technology solutions...
+        .job
+          .job-wrap
+            .main
+              %h2.job-title Lead Developer
+              %h3.job-company New Life Church
+              %h3.job-dates 2008 - 2016
+            .pts
+              %ul
+                %li Leading a dev team consisting of product manger, UI/UX designer, business analyst, and 8 remote and local developers.
+                %li Leading research and implementation of technology solutions...
+    %section#experience
+      %h1 Experience
+      %p The following are areas of experience and understanding in these areas...
+      .experience
+        .title Leader
+        %ul
+          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      .experience
+        .title Developer
+        %ul
+          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      .experience
+        .title Data
+        %ul
+          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    %section#contact
+      %a.button.large{ :href => 'mailto:nathan@pru.design' } Contact Me
+    %section#projects
+      %h1 Projects
+    %section#references
+      %h1 References
+      %p Available upon request.
+
+
+
+
+
+
+  %script{ src: "js/plugins.js" }
+  %script{ src: "js/main.js" }
