@@ -32,15 +32,24 @@ h2 {
   font-size: 20px;
   font-weight: normal;
   margin: .2em 0; }
+  @media screen and (max-width: 320px) {
+    h2 {
+      font-size: 18px; } }
 
 h3 {
   color: #111111;
   font-size: 16px;
   font-weight: normal;
   margin: .2em 0; }
+  @media screen and (max-width: 320px) {
+    h3 {
+      font-size: 14px; } }
 
 .title {
   font-size: 28px; }
+  @media screen and (max-width: 320px) {
+    .title {
+      font-size: 24px; } }
 
 ul {
   margin-block-start: 1em;
@@ -98,12 +107,19 @@ a {
     background-color: #056288;
     text-transform: uppercase;
     transition: transform .2s ease-in-out; }
+    @media screen and (max-width: 320px) {
+      a.button {
+        padding: .7em 2em; } }
     a.button:hover {
       transform: scale(1.05);
       text-decoration: none; }
     a.button.large {
       font-size: 28px;
       padding: 1em 5em; }
+      @media screen and (max-width: 320px) {
+        a.button.large {
+          font-size: 22px;
+          padding: 1em 3em; } }
 
 p {
   line-height: 1.5em; }
@@ -149,10 +165,18 @@ p {
  */
 #header {
   margin: 0; }
+  @media screen and (max-width: 768px) {
+    #header .header-wrap {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   #header .header-wrap .header-section {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto; }
+    @media screen and (max-width: 768px) {
+      #header .header-wrap .header-section {
+        text-align: center; } }
 
 /**
  * Layout and section styles
@@ -193,16 +217,28 @@ section {
     color: whitesmoke; }
   #work .job .job-wrap {
     position: relative; }
+    @media screen and (max-width: 320px) {
+      #work .job .job-wrap .main {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
     #work .job .job-wrap .main .title {
       -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
       flex: 1 1 auto; }
+    @media screen and (max-width: 320px) {
+      #work .job .job-wrap .main .time {
+        width: 100%;
+        padding-left: 60px; } }
     #work .job .job-wrap .pts {
       -webkit-transition: height .3s ease;
       -o-transition: height .3s ease;
       transition: height .3s ease;
       overflow: hidden;
       margin-left: 60px; }
+      @media screen and (max-width: 320px) {
+        #work .job .job-wrap .pts {
+          margin-left: 0; } }
       #work .job .job-wrap .pts h3 {
         padding-top: 1em;
         text-transform: uppercase;
@@ -227,6 +263,14 @@ section {
   grid-template-rows: auto;
   grid-gap: 20px;
   grid-template-areas: ". . ." ". . ."; }
+  @media screen and (max-width: 1024px) {
+    #experience .grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: ". ." ". ." ". ."; } }
+  @media screen and (max-width: 768px) {
+    #experience .grid {
+      grid-template-columns: 1fr;
+      grid-template-areas: "." "." "." "." "." "."; } }
   #experience .grid .experience {
     background-color: #323232;
     padding: 20px;

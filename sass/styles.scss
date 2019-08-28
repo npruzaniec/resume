@@ -43,15 +43,24 @@ h2 {
   font-size: 20px;
   font-weight: normal;
   margin: .2em 0;
+  @media screen and (max-width: map-get($breakpoints, "small")) {
+    font-size: 18px;
+  }
 }
 h3 {
   color: $text-color;
   font-size: 16px;
   font-weight: normal;
   margin: .2em 0;
+  @media screen and (max-width: map-get($breakpoints, "small")) {
+    font-size: 14px;
+  }
 }
 .title {
   font-size: 28px;
+  @media screen and (max-width: map-get($breakpoints, "small")) {
+    font-size: 24px;
+  }
 }
 ul {
   margin-block-start: 1em;
@@ -116,6 +125,9 @@ a {
     background-color: $highlight-color;
     text-transform: uppercase;
     transition: transform .2s ease-in-out;
+    @media screen and (max-width: map-get($breakpoints, "small")) {
+      padding: .7em 2em;
+    }
 
     &:hover {
       transform: scale(1.05);
@@ -124,6 +136,10 @@ a {
     &.large {
       font-size: 28px;
       padding: 1em 5em;
+      @media screen and (max-width: map-get($breakpoints, "small")) {
+        font-size: 22px;
+        padding: 1em 3em;
+      }
     }
   }
 }
@@ -189,11 +205,18 @@ p {
   margin: 0;
 
   .header-wrap {
-
+    @media screen and (max-width: map-get($breakpoints, "medium")) {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
     .header-section {
       -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
       flex: 1 1 auto;
+      @media screen and (max-width: map-get($breakpoints, "medium")) {
+        text-align: center;
+      }
     }
   }
 }
@@ -246,10 +269,24 @@ section {
       position: relative;
 
       .main {
+        @media screen and (max-width: map-get($breakpoints, "small")) {
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+        }
         .title {
           -webkit-flex: 1 1 auto;
           -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+          .job-title {
+
+          }
+        }
+        .time {
+          @media screen and (max-width: map-get($breakpoints, "small")) {
+            width: 100%;
+            padding-left: 60px;
+          }
         }
       }
       .pts {
@@ -258,6 +295,9 @@ section {
         transition: height .3s ease;
         overflow: hidden;
         margin-left: 60px;
+        @media screen and (max-width: map-get($breakpoints, "small")) {
+          margin-left: 0;
+        }
 
         h3 {
           padding-top: 1em;
@@ -303,7 +343,14 @@ section {
     grid-template-rows: auto;
     grid-gap: 20px;
     grid-template-areas: ". . ." ". . .";
-
+    @media screen and (max-width: map-get($breakpoints, "large")) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: ". ." ". ."". .";
+    }
+    @media screen and (max-width: map-get($breakpoints, "medium")) {
+      grid-template-columns: 1fr;
+      grid-template-areas: "." "." "." "." "." ".";
+    }
     .experience {
       background-color: $dark-background;
       padding: 20px;
