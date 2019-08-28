@@ -20,15 +20,27 @@ $text-color: rgb(17, 17, 17) !default;
 
 /// Page background color
 /// @type Color
-$light-background: rgb(220, 220, 220) !default;
+$light-background: rgb(245, 245, 245) !default;
+
+/// Page background color
+/// @type Color
+$light-transparent: rgba(220, 220, 220, 0) !default;
 
 /// Medium background color
 /// @type Color
-$medium-background: rgb(237, 237, 237) !default;
+$medium-background: rgb(230, 230, 230) !default;
+
+/// Dark background color
+/// @type Color
+$dark-background: rgb(50, 50, 50) !default;
 
 /// Highlight color
 /// @type Color
-$highlight-color: rgb(247, 213, 162) !default;
+$highlight-color: rgb(5, 98, 136) !default;
+
+/// Highlight transparent
+/// @type Color
+$highlight-transparent: rgba(247, 213, 162, 0) !default;
 
 
 

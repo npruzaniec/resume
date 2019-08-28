@@ -37,88 +37,188 @@
               %a{:href => 'https://www.linkedin.com/in/npruzaniec'} linkedin.com/in/npruzaniec
         .header-section.about.text-center
           .interests
-            %h3 Technologist • Developer • Data Nerd • Endlessly Curious
+            %h3 Technologist • Developer • Data Curator • Endlessly Curious
           .location
             %h2 Redding, CA
         .header-section.contact.text-right
           .email
             %h2
-              %a{:href => 'mailto:nathan@pru.design'} nathan@pru.design
+              %a{ :href => 'mailto:nathan@pru.design', :target => '_blank' } nathan@pru.design
           .phone
             %h2
               %a{:href => 'tel:501.472.1274'} 501.472.1274
               /- jobs[0].shuffle.each_with_index do |book, index|
               /%h1= jobs[0].title
     %section#about
-      %h1 About
-      %a.button{ :href => 'mailto:nathan@pru.design' } Contact Me
+      .section-title
+        %h1 About
+        %a.button{ :href => 'mailto:nathan@pru.design', :target => '_blank' } Contact Me
       .about-copy
         %p I love understanding, disecting, refining, improving, and bringing effieciency to systems. The more data the better, the bigger the problem, the more fun. I love building teams, and understanding everything. I love understanding, disecting, refining, improving, and bringing effieciency to systems. The more data the better, the bigger the problem, the more fun. I love building teams, and understanding everything. I love understanding, disecting, refining, improving, and bringing effieciency to systems. The more data the better, the bigger the problem, the more fun. I love building teams, and understanding everything.
     %section#work
-      %h1 Work
+      .section-title
+        %h1 Work
       .job.active
         .job-wrap
-          .main
-            %h2.job-title Technology Director
-            %h3.job-company Bethel Media Group
-            %h3.job-dates 2016 - Present
+          .main.flex
+            .toggle
+              %span
+              %span
+            .title
+              %h2.job-title Technology Director
+              %h3.job-company Bethel Media Group
+            .time
+              %h3.job-dates 2016 - Present
           .pts
+            %h3 Responsibilities
             %ul
-              %li Leading a dev team consisting of product manger, UI/UX designer, business analyst, and 8 remote and local developers.
-              %li Leading research and implementation of technology solutions...
+              %li Leading a dev team consisting of product manger, UI/UX designer, business analyst, and 8 local and remote developers.
+              %li Leading research and implementation of technology solutions with focus on user experience, sustainability, and cost efficiency.
+              %li Coordinate with departments and business units on technology needs and solution.
+              %li Building and managing our data pipeline for quality data collection and integrity.
+              %li Managing data collection, visualization, and analysis for business intelligence, accounting, platform usage, and marketing flows & initiatives.
+            %h3 Projects
+            %ul
+              %li <strong>Custom Donations Platform</strong> - <span class="small-text">Led the vision and scope for a custom donations platform which allowed our existing users to very simply donate, setup recurring donation, and manage donation history and preferences. <a href="https://www.bethel.tv/give"  taget="_blank">[&nbsp;bethel.tv/give&nbsp;]</a></span>
+              %li <strong>Multi-Lingual Podcast Platform</strong> - <span class="small-text">Directed the administrative, design, and development of a podcast platform to support 14 languages with industry standard feeds and analytics. <a href="https://www.bethel.tv/podcasts" taget="_blank">[&nbsp;bethel.tv/podcasts&nbsp;]</a></span>
+              %li <strong>Data Repository and Visualization</strong> - <span class="small-text">Built a data pipeline from the way our databases are structured, to our ETL, data store, and vizualization and dashboards with Tableau products.</span>
       .job
         .job-wrap
-          .main
-            %h2.job-title Lead Developer
-            %h3.job-company Silverlake Design Studio
-            %h3.job-dates 2016 - 2017
+          .main.flex
+            .toggle
+              %span
+              %span
+            .title
+              %h2.job-title Lead Developer/Owner
+              %h3.job-company Pru & Drew Inc.
+            .time
+              %h3.job-dates 2014 - Present
           .pts
             %ul
-              %li Leading a dev team consisting of product manger, UI/UX designer, business analyst, and 8 remote and local developers.
-              %li Leading research and implementation of technology solutions...
-        .job
-          .job-wrap
-            .main
+              %li Building a media company called The Beauty Project which includes the website, producing photography and video, and planning the brand vision, mission and campaigns. <a href="https://thebeautyproject.is" taget="_blank">[&nbsp;thebeautyproject.is&nbsp;]</a>
+              %li Consulting businesses on technology solutions for their online presence, e-commerce, and internal systems to run and manage their business.
+              %li Building websites and managing SEO for businesses including blogging, ecommerce, subscription, POS, and digital delivery tools.
+              %li Creating media including photography & editing, video directing and editing, logo design & user interface design, and podcast production.
+            %h3 Projects
+            %ul
+              %li <strong>Technology Consulting</strong> - <span class="small-text">Helping organizations find ways to increase their potential with the resources at hand is one of my passions. More is always possible with what's in front of you. Consulting has given me the opportunity to advise on building complex solutions with simple tools.</span>
+              %li <strong>Video Production</strong> - <span class="small-text">Thgrough 12+ years of video experience I have told people and organization's stories through documentary shorts, animated promo videos, and live production.</span>
+              %li <strong>Website Development</strong> - <span class="small-text">Offering affordable, flexible, and fully custom websites to new companies, or companies trying to refresh their identity. Producing quality that is attainable for any business has been very rewarding. <a href="https://www.homeagainpinebluff.org" taget="_blank">[&nbsp;homeagainpinebluff.org&nbsp;]</a></span>
+
+      .job
+        .job-wrap
+          .main.flex
+            .toggle
+              %span
+              %span
+            .title
               %h2.job-title Lead Developer
               %h3.job-company New Life Church
+            .time
               %h3.job-dates 2008 - 2016
-            .pts
-              %ul
-                %li Leading a dev team consisting of product manger, UI/UX designer, business analyst, and 8 remote and local developers.
-                %li Leading research and implementation of technology solutions...
+          .pts
+            %ul
+              %li Developed web and app based resources to facilitate the operations and membership needs for 12 locations across the state.
+              %li Researched and implemented live streaming solutions for services, events, and conferences.
+              %li Scoped, implemented, and trained hundreds of staff and volunteers on internal database management, operations, and integrity. I oversaw the inital data migration from the legacy tool which involved very detailed accounting data integrity needs.
+              %li Developed and managed podcast platform for distributing weekly audio content with coordinated reading content and group membership to facilitate teaching.
+            %h3 Projects
+            %ul
+              %li <strong>NLC App</strong> - <span class="small-text">Built an app to deliver video, podcast, event info, event registration, articles, and live streaming for iOS, Android, and AppleTV using an app building tool connected to our site's CMS via JSON APIs. [ No longer available. ]</span>
+              %li <strong>Internal Database</strong> - <span class="small-text">This was a huge undertaking of migrating years of memebership and donation data from a legacy system, and training staff and volunteers across many geographic locations on usage and reporting.</span>
+              %li <strong>Media RAID</strong> - <span class="small-text">Through my experience with video editing, I oversaw the purchase and implementation of a large RAID for media storage and video editing which included planning the network segmentation, physical network wiring and 10Gbe hardware, permissions, and organization of the content. This build facilitated the work of 4 video editors, 3 graphic designers, and many support staff.</span>
+
     %section#experience
-      %h1 Experience
-      %p The following are areas of experience and understanding in these areas...
-      .experience
-        .title Leader
-        %ul
-          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      .experience
-        .title Developer
-        %ul
-          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      .experience
-        .title Data
-        %ul
-          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          %li Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    %section#contact
-      %a.button.large{ :href => 'mailto:nathan@pru.design' } Contact Me
-    %section#projects
-      %h1 Projects
+      .section-title
+        %h1 Experience
+        %p Thse are areas I have invested in learning through work experience, research, and general curiosity and hobbying.
+      .grid
+        .experience
+          .main.flex
+            .toggle
+              %span
+              %span
+            %h2.title Leader
+          %ul
+            %li Through my broad media and development experience, I am able to lead many areas & skillsets with high rapport.
+            %li I am skilled at teaching, traning, and sharing my experiences.
+            %li I enjoy finding the balance and priorities needed to succeed in different projects.
+            %li Creating a culture of enthusiasm and dreaming alongside excellence and responsibility.
+            %li Hiring and vetting candidates for developer, creative, and administrative roles.
+        .experience
+          .main.flex
+            .toggle
+              %span
+              %span
+            %h2.title Developer
+          %ul
+            %li I started with front-end development & PHP 8 years ago.
+            %li This experience allowed me to work with APIs, data modeling, and diverse platforms & integrations.
+            %li I love solving problems and finding the most I can get out of the data and tools available.
+            %li Building out customer management systems, and marketing workflows for over a million contacts.
+        .experience
+          .main.flex
+            .toggle
+              %span
+              %span
+            %h2.title Data
+          %ul
+            %li Managing data pipeline with ETL + Google Big Query.
+            %li Doing data cleaning & validation with Trifacta, Tableau Prep, & Tableau Desktop.
+            %li Data reporting, analysis, and visualization with Tableau Desktop.
+            %li Working on data migration and database structuring projects for large applications.
+            %li Managing a contact database of over 50 million contacts.
+        .experience
+          .main.flex
+            .toggle
+              %span
+              %span
+            %h2.title Technology
+          %ul
+            %li Deep understanding of internet technology and the way content is built and delivered.
+            %li Understanding of the browser policy, web page interpretation, and security protocols.
+            %li Understanding of the hardware, protocols, and mitigations to attacks the internet runs on.
+            %li Love for knowing how computers work down to the hardware.
+            %li Experience with software/hardware virtualization.
+            %li CDNs, conatiners, streaming, analytics, and security.
+        .experience
+          .main.flex
+            .toggle
+              %span
+              %span
+            %h2.title Media
+          %ul
+            %li 12+ years of video filming and editing.
+            %li Color correction experience with RAW, PRORES, and H.264 video.
+            %li Steadicam, crane operation, drone piloting.
+            %li RAW video workflow with Blackmagic, Davinci Resolve, FCP, & Adobe Creative Suite.
+            %li Motion Graphics animation with Adobe After Effects & Cinema4D.
+            %li Phtography and Lightroom photo editing.
+            %li Photoshop, Illustrator, InDesign for layout and logo design.
+            %li Sketch and Figma for UI/UX wireframing and design.
+        .experience
+          .main.flex
+            .toggle
+              %span
+              %span
+            %h2.title Security/Infosec
+          %ul
+            %li 10+ years of researching and studying computer and network security.
+            %li Information security and data encryption at rest, in transit, or for authentication.
+            %li User authentication, database technology, and authentication methods including 2FA, OAth, SQRL, etc.
+            %li Secure hashing and encryption protocols and best practices.
+            %li Intrusion prevention, training, detecting, and hardening.
+            %li Security industry news, standards, and technology.
+    %section#contact.flex
+      %a.button.large{ :href => 'mailto:nathan@pru.design', :target => '_blank' } Contact Me
     %section#references
-      %h1 References
-      %p Available upon request.
+      .section-title
+        %h1 References
+        %p Available upon request.
 
 
 
 
 
 
-  %script{ src: "js/plugins.js" }
-  %script{ src: "js/main.js" }
+  %script{ src: "js/app.js" }

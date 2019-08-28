@@ -28,24 +28,40 @@ html {
 }
 body {
   color: $text-color;
+  background-color: $light-background;
   font: normal 16px / 1.2 $text-font-stack;
+  padding: 2%;
 }
 h1 {
   color: $text-color;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: normal;
+  margin: .2em 0;
 }
 h2 {
   color: $text-color;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: normal;
+  margin: .2em 0;
 }
 h3 {
   color: $text-color;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
+  margin: .2em 0;
 }
+.title {
+  font-size: 28px;
+}
+ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 1.1em;
 
+}
+.small-text {
+  font-size: 80%;
+}
 
 /**
  * Utility classes
@@ -76,12 +92,17 @@ h3 {
 .text-right {
   text-align: right;
 }
+.section-title {
+  p {
+    margin-top: 0;
+  }
+}
 
 /**
  * Basic styles for links and buttons
  */
 a {
-  color: $highlight-color;
+  color: $text-color;
   text-decoration: none;
 
   &:hover {
@@ -89,26 +110,86 @@ a {
     text-decoration: underline;
   }
   &.button {
+    display: inline-block;
     padding: 1em 3em;
+    color: $light-background;
     background-color: $highlight-color;
-    zoom: 1;
-    transition: zoom .3s ease-in-out;
+    text-transform: uppercase;
+    transition: transform .2s ease-in-out;
+
     &:hover {
-      zoom: 1.3;
+      transform: scale(1.05);
+      text-decoration: none;
     }
     &.large {
       font-size: 28px;
-      font-weight: bold;
       padding: 1em 5em;
     }
   }
 }
+p {
+  line-height: 1.5em;
+  a {
+    color: $highlight-color;
+  }
+}
+
+
+
+/**
+ * Toggle  styles
+ */
+ .toggle {
+   color: $light-background;
+   width: 40px;
+   height: 40px;
+   margin-right: 20px;
+   border: 0;
+   font-size: 1.5em;
+   position: relative;
+   display: inline-block;
+
+   span {
+     position: absolute;
+     transition: .3s;
+     background: $light-background;
+     border-radius: 2px;
+
+     &:first-of-type {
+       top: 25%;
+       bottom: 25%;
+       left: 45%;
+       width: 10%;
+     }
+     &:last-of-type {
+       top: 45%;
+       right: 25%;
+       left: 25%;
+       height: 10%;
+     }
+   }
+ }
+.active {
+  .toggle {
+    span:first-of-type, span:last-of-type {
+      transform: rotate(90deg);
+    }
+    span:last-of-type {
+      left: 50%;
+      right: 50%;
+    }
+  }
+}
+
 /**
  * Header styles
  */
 
 #header {
+  margin: 0;
+
   .header-wrap {
+
     .header-section {
       -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
@@ -123,3 +204,181 @@ a {
 /**
  * Layout and section styles
  */
+section {
+  margin: 60px 0;
+  .section-title {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+/**
+ * Work section styles
+ */
+#work {
+  .job {
+    background-color: $dark-background;
+    color: $light-background;
+    padding: 24px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    h1, h2, h3, li, a {
+      color: $light-background;
+    }
+    .job-wrap {
+      position: relative;
+
+      .main {
+        .title {
+          -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+        }
+      }
+      .pts {
+        -webkit-transition: height .3s ease;
+        -o-transition: height .3s ease;
+        transition: height .3s ease;
+        overflow: hidden;
+        margin-left: 60px;
+
+        h3 {
+          padding-top: 1em;
+          text-transform: uppercase;
+          font-size: 80%;
+        }
+      }
+    }
+    &.active {
+      background-color: $highlight-color;
+      .job-wrap {
+        .main {
+
+        }
+        .pts {
+          //display: block;
+        }
+      }
+    }
+    &:not(.active) {
+      .pts {
+        display: none;
+      }
+    }
+    &:hover {
+      background-color: $highlight-color;
+    }
+  }
+}
+
+#experience {
+  .section-title {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    grid-template-areas: ". . ." ". . .";
+
+    .experience {
+      background-color: $dark-background;
+      padding: 20px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: background-color .3s ease;
+      h1, h2, h3, li, a {
+        color: $light-background;
+      }
+      .main {
+        -webkit-align-items: flex-start;
+        -ms-flex-align: flex-start;
+        align-items: flex-start;
+        z-index: 10;
+        position: relative;
+
+        .toggle {
+          margin-right: 10px;
+        }
+        .title {
+          -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+        }
+      }
+      ul {
+        display: none;
+        -webkit-transition: height .3s ease;
+        -o-transition: height .3s ease;
+        transition: height .3s ease;
+        overflow: hidden;
+        margin: 0;
+        margin-left: 10px;
+        line-height: 1.6em;
+
+      }
+      &.active {
+        background-color: $highlight-color;
+
+        .main {
+          -webkit-align-items: flex-start;
+          -ms-flex-align: flex-start;
+          align-items: flex-start;
+        }
+
+        ul {
+          display: block;
+        }
+
+      }
+      &:not(.active) {
+        .main:after {
+          content: "";
+          position: absolute;
+          left: -20px;
+          right: -20px;
+          top: calc(100% + 20px);
+          height: 100vh;
+          background-color: $light-background;
+        }
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+#references {
+  .section-title {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+  }
+}
