@@ -177,6 +177,8 @@ p {
     @media screen and (max-width: 768px) {
       #header .header-wrap .header-section {
         text-align: center; } }
+    #header .header-wrap .header-section .interests {
+      padding: 0 20px; }
 
 /**
  * Layout and section styles
