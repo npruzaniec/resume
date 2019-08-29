@@ -31,20 +31,34 @@ body {
   background-color: $light-background;
   font: normal 16px / 1.2 $text-font-stack;
   padding: 2%;
+
+  @media print {
+    background-color: white;
+    font-size: 11pt;
+    padding: 0;
+  }
 }
 h1 {
   color: $text-color;
   font-size: 30px;
   font-weight: normal;
   margin: .2em 0;
+
+  @media print {
+    font-size: 24pt;
+  }
 }
 h2 {
   color: $text-color;
   font-size: 20px;
   font-weight: normal;
   margin: .2em 0;
+
   @media screen and (max-width: map-get($breakpoints, "small")) {
     font-size: 18px;
+  }
+  @media print {
+    font-size: 15pt;
   }
 }
 h3 {
@@ -52,14 +66,22 @@ h3 {
   font-size: 16px;
   font-weight: normal;
   margin: .2em 0;
+
   @media screen and (max-width: map-get($breakpoints, "small")) {
     font-size: 14px;
+  }
+  @media print {
+    font-size: 12pt;
   }
 }
 .title {
   font-size: 28px;
+
   @media screen and (max-width: map-get($breakpoints, "small")) {
     font-size: 24px;
+  }
+  @media print {
+    font-size: 19pt;
   }
 }
 ul {
@@ -125,8 +147,12 @@ a {
     background-color: $highlight-color;
     text-transform: uppercase;
     transition: transform .2s ease-in-out;
+
     @media screen and (max-width: map-get($breakpoints, "small")) {
       padding: .7em 2em;
+    }
+    @media print {
+      display: none;
     }
 
     &:hover {
@@ -170,6 +196,10 @@ p {
      transition: .3s;
      background: $light-background;
      border-radius: 2px;
+
+     @media print {
+       background: white;
+     }
 
      &:first-of-type {
        top: 25%;
@@ -223,7 +253,7 @@ p {
       }
     }
   }
-} 
+}
 
 
 
@@ -266,8 +296,16 @@ section {
     margin: 20px 0;
     cursor: pointer;
     transition: background-color .3s ease;
+
+    @media print {
+      color: white;
+    }
     h1, h2, h3, li, a {
       color: $light-background;
+
+      @media print {
+        color: white;
+      }
     }
     .job-wrap {
       position: relative;
@@ -287,6 +325,7 @@ section {
           }
         }
         .time {
+
           @media screen and (max-width: map-get($breakpoints, "small")) {
             width: 100%;
             padding-left: 60px;
@@ -299,8 +338,13 @@ section {
         transition: height .3s ease;
         overflow: hidden;
         margin-left: 60px;
+
         @media screen and (max-width: map-get($breakpoints, "small")) {
           margin-left: 0;
+        }
+        @media print {
+          display: block !important;
+          height: auto !important;
         }
 
         h3 {
@@ -331,8 +375,13 @@ section {
     }
   }
 }
-
+/**
+ * Experience section styles
+ */
 #experience {
+  @media print {
+    margin-bottom: 0;
+  }
   .section-title {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -347,6 +396,7 @@ section {
     grid-template-rows: auto;
     grid-gap: 20px;
     grid-template-areas: ". . ." ". . .";
+
     @media screen and (max-width: map-get($breakpoints, "large")) {
       grid-template-columns: 1fr 1fr;
       grid-template-areas: ". ." ". ."". .";
@@ -363,6 +413,10 @@ section {
       transition: background-color .3s ease;
       h1, h2, h3, li, a {
         color: $light-background;
+
+        @media print {
+          color: white;
+        }
       }
       .main {
         -webkit-align-items: flex-start;
@@ -390,6 +444,16 @@ section {
         margin-left: 10px;
         line-height: 1.6em;
 
+        @media print {
+          display: block !important;
+          height: auto !important;
+          font-size: 10pt;
+        }
+        li {
+          &:first-of-type {
+            padding-top: 20px;
+          }
+        }
       }
       &.active {
         background-color: $highlight-color;
@@ -414,6 +478,10 @@ section {
           top: calc(100% + 20px);
           height: 100vh;
           background-color: $light-background;
+
+          @media print {
+            display: none;
+          }
         }
         ul {
           display: none;
@@ -422,7 +490,9 @@ section {
     }
   }
 }
-
+/**
+ * References section styles
+ */
 #references {
   .section-title {
     -webkit-flex-direction: column;
@@ -431,5 +501,23 @@ section {
     -webkit-align-items: flex-start;
     -ms-flex-align: flex-start;
     align-items: flex-start;
+  }
+  @media print {
+    display: none;
+  }
+}
+/**
+ * Print sepcific styles
+ */
+@media print {
+  #work {
+    .job {
+      &:nth-of-type(3) {
+        page-break-after: always;
+      }
+    }
+  }
+  #contact {
+    display: none;
   }
 }
