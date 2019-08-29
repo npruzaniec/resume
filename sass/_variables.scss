@@ -49,7 +49,7 @@ $highlight-transparent: rgba(247, 213, 162, 0) !default;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
+  'small': 425px,
   'medium': 768px,
   'large': 1024px,
 ) !default;
