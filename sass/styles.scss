@@ -160,11 +160,11 @@ a {
       text-decoration: none;
     }
     &.large {
-      font-size: 28px;
-      padding: 1em 5em;
+      font-size: 24px;
+      padding: 1em 4em;
       @media screen and (max-width: map-get($breakpoints, "small")) {
         font-size: 22px;
-        padding: 1em 3em;
+        padding: 1em 2.5em;
       }
     }
   }
