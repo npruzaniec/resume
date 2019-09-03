@@ -521,3 +521,17 @@ section {
     display: none;
   }
 }
+
+/**
+ * Cover letter sepcific styles
+ */
+#cover {
+  padding: 10%;
+
+  p {
+    line-height: 1.6em;
+    @media print {
+      font-size: 14pt;
+    }
+  }
+}

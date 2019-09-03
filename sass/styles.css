@@ -396,5 +396,15 @@ section {
 
   #contact {
     display: none; } }
+/**
+ * Cover letter sepcific styles
+ */
+#cover {
+  padding: 10%; }
+  #cover p {
+    line-height: 1.6em; }
+    @media print {
+      #cover p {
+        font-size: 14pt; } }
 
 /*# sourceMappingURL=styles.css.map */
