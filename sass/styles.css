@@ -19,7 +19,9 @@ body {
   color: #111111;
   background-color: whitesmoke;
   font: normal 16px/1.2 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  padding: 2%; }
+  margin: 0; }
+  body .content {
+    padding: 2vw; }
   @media print {
     body {
       background-color: white;
@@ -108,6 +110,10 @@ ul {
 .section-title p {
   margin-top: 0; }
 
+@media print {
+  .no-print {
+    display: none; } }
+
 /**
  * Basic styles for links and buttons
  */
@@ -127,9 +133,6 @@ a {
     @media screen and (max-width: 425px) {
       a.button {
         padding: .7em 2em; } }
-    @media print {
-      a.button {
-        display: none; } }
     a.button:hover {
       transform: scale(1.05);
       text-decoration: none; }
@@ -182,6 +185,19 @@ p {
 .active .toggle span:last-of-type {
   left: 50%;
   right: 50%; }
+
+/**
+ * Notice banner styles
+ */
+#notice {
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #056288; }
+  #notice a.notice-wrap {
+    display: block;
+    padding: 1em 2em;
+    color: whitesmoke; }
 
 /**
  * Header styles
@@ -383,19 +399,13 @@ section {
   -webkit-align-items: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start; }
-@media print {
-  #references {
-    display: none; } }
 
 /**
  * Print sepcific styles
  */
 @media print {
   #work .job:nth-of-type(3) {
-    page-break-after: always; }
-
-  #contact {
-    display: none; } }
+    page-break-after: always; } }
 /**
  * Cover letter sepcific styles
  */
