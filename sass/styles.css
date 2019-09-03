@@ -223,7 +223,7 @@ p {
  * Layout and section styles
  */
 section {
-  margin: 60px 0; }
+  margin: 50px 0; }
   section .section-title {
     display: -ms-flexbox;
     display: -webkit-flex;
