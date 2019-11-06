@@ -98,6 +98,7 @@ ul {
   font-size: 80%;
 }
 
+
 /**
  * Utility classes
  */
@@ -520,15 +521,13 @@ section {
 /**
  * References section styles
  */
-#references {
-  .section-title {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: flex-start;
-    align-items: flex-start;
-  }
+.section-title {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
 }
 /**
  * Print sepcific styles
@@ -538,6 +537,49 @@ section {
     .job {
       &:nth-of-type(3) {
         page-break-after: always;
+      }
+    }
+  }
+}
+
+
+#educations {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    grid-template-areas: ". .";
+    @media screen and (max-width: map-get($breakpoints, "small")) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "." ".";
+    }
+    .education {
+      border: solid 2px $dark-background;
+      padding: 24px;
+      @media print {
+        //color: white;
+      }
+      ul {
+        margin-bottom: 0;
+      }
+      
+      .main {
+        @media screen and (max-width: map-get($breakpoints, "medium")) {
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+        }
+
+        .title {
+          -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+          .job-title {
+
+          }
+        }
       }
     }
   }

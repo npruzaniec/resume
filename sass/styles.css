@@ -395,7 +395,7 @@ section {
 /**
  * References section styles
  */
-#references .section-title {
+.section-title {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -409,6 +409,32 @@ section {
 @media print {
   #work .job:nth-of-type(3) {
     page-break-after: always; } }
+#educations .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  grid-template-areas: ". ."; }
+  @media screen and (max-width: 425px) {
+    #educations .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "." "."; } }
+  #educations .grid .education {
+    border: solid 2px #323232;
+    padding: 24px; }
+    #educations .grid .education ul {
+      margin-bottom: 0; }
+    @media screen and (max-width: 768px) {
+      #educations .grid .education .main {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+    #educations .grid .education .main .title {
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto; }
+
 /**
  * Cover letter sepcific styles
  */
